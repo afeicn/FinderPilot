@@ -1,0 +1,10 @@
+# Build output
+build/
+*.app
+
+# Backups of previous installs
+backup/
+
+# macOS noise
+.DS_Store
+._*
