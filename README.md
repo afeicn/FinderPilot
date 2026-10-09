@@ -1,11 +1,22 @@
-# FinderPilot
+<div align="center">
+  <img src="assets/logo-banner.png" alt="FinderPilot" width="640">
+</div>
 
-Two small Finder tools for macOS. Double-click them from a Finder window and they do the thing you were about to walk to a terminal and type.
+<p align="center">
+  Two small Finder tools for macOS. Double-click them from a Finder window and
+  they do the thing you were about to walk to a terminal and type.
+</p>
+
+<p align="center">
+  <img src="assets/showcase.png" alt="Open in Pi and New Markdown sitting in a Finder window" width="700">
+</p>
+
+## What you get
 
 | App | What it does |
 |---|---|
-| **Open in Pi** | Select a folder in Finder, double-click — launches the [pi](https://github.com/earendil-works/pi) coding agent rooted at that folder |
-| **New Markdown** | Double-click — creates a `.md` file in the front Finder window and selects it |
+| <img src="assets/icon-pi.png" alt="" width="32" align="absmiddle"> **Open in Pi** | Select a folder in Finder, double-click — launches the [pi](https://github.com/earendil-works/pi) coding agent rooted at that folder |
+| <img src="assets/icon-md.png" alt="" width="32" align="absmiddle"> **New Markdown** | Double-click — creates a `.md` file in the front Finder window and selects it |
 
 No config, no daemon, no dependencies. Two AppleScript applets and a build script.
 
@@ -101,14 +112,26 @@ Editing the logic means editing the `.applescript` files and re-running the inst
 ```
 FinderPilot/
 ├── install.sh              build + install
+├── make-assets.py          regenerate the brand images
 ├── src/
 │   ├── open-in-pi.applescript
 │   └── new-markdown.applescript
 ├── icons/
-│   ├── pi.iconset/         π icon
+│   ├── pi.iconset/         π icon (source of truth for the app icon)
 │   └── md.iconset/         MD icon
+├── assets/                 README images, generated
+│   ├── logo.png            combined mark
+│   ├── logo-banner.png     header banner
+│   ├── showcase.png        Finder window illustration
+│   └── icon-pi.png / icon-md.png
 ├── build/                  build output (generated)
 └── backup/                 previous installs (generated)
+```
+
+Regenerate the brand images after changing an icon:
+
+```bash
+python3 make-assets.py
 ```
 
 ## License
