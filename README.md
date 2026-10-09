@@ -39,19 +39,12 @@ cd FinderPilot
 
 Both apps land in `/Applications`.
 
-Prefer a double-click? Open `install.sh` in a text editor, or from Terminal:
-
-```bash
-open -a TextEdit install.sh
-```
-
 ### Other options
 
 ```bash
-./install.sh --uninstall          # remove both apps
-./install.sh --help               # usage
-
-FINDERPILOT_DIR=~/Applications ./install.sh   # install elsewhere
+./install.sh --uninstall                        # remove both apps
+./install.sh --help                             # usage
+FINDERPILOT_DIR=~/Applications ./install.sh     # install elsewhere
 ```
 
 Re-running the installer is safe. If an app already exists, the old version is moved to `backup/` before being replaced.
